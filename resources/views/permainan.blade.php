@@ -27,11 +27,11 @@
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Harmoni</h5>
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Mahjong</h5>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Mahjong</h5>
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Tebak Angka</h5>
                         </button>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                                                 <p class="mb-4">Permainan Memori (Memory Game) adalah sebuah permainan yang dirancang untuk mengasah fokus dan konsentrasi pengguna dengan mencocokkan pasangan kartu yang tersembunyi. 
                                         Permainan ini memiliki tujuan utama untuk penanggulangan dan pencegahan depresi, dengan memberikan aktivitas yang menyenangkan dan menenangkan yang dapat membantu mengurangi gejala depresi dan kecemasan. 
                                         Selain itu, isi dari kartu-kartu ini akan mencakup informasi tentang gejala depresi dan cara penanggulangannya, yang bertujuan untuk meningkatkan kesadaran pengguna mengenai kesehatan mental mereka.</p>
-                                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                                <a href="{{ route('Ingat') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan1" role="tabpanel"
                                                 aria-labelledby="nav-tujuan1-tab">
@@ -119,7 +119,7 @@
                                                 aria-labelledby="nav-deskripsi-tab">
                                                 <p class="mb-4">Teka-Teki Blok adalah permainan yang dirancang untuk melatih kemampuan berpikir strategis dan spasial Anda. Dengan antarmuka yang sederhana namun menantang, game ini mengajak Anda untuk menyusun blok-blok dengan cara yang benar agar sesuai dan mengisi ruang yang tersedia. 
                                         Permainan ini tidak hanya menyenangkan tetapi juga dapat berkontribusi pada peningkatan kesehatan mental Anda.</p>
-                                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                                <a href="{{ route('Puzzle') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan" role="tabpanel"
                                                 aria-labelledby="nav-tujuan-tab">
@@ -170,7 +170,7 @@
                                                 <p class="mb-4">Harmoni adalah permainan yang terinspirasi dari Mahjong, dirancang khusus untuk mengkombinasikan dua tile yang sama. Game ini menantang dan menenangkan, mengajak Anda untuk menemukan pasangan tile yang serupa untuk menghapusnya dari papan. 
                                         Permainan ini tidak hanya mengasyikkan, tetapi juga memiliki manfaat untuk kesehatan mental Anda.
                                         Permainan ini tidak hanya menyenangkan tetapi juga dapat berkontribusi pada peningkatan kesehatan mental Anda.</p>
-                                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                                <a href="{{ route('mahjong') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan2" role="tabpanel"
                                                 aria-labelledby="nav-tujuan2-tab">
@@ -221,7 +221,7 @@
                                                 <p class="mb-4">Harmoni adalah permainan yang terinspirasi dari Mahjong, dirancang khusus untuk mengkombinasikan dua tile yang sama. Game ini menantang dan menenangkan, mengajak Anda untuk menemukan pasangan tile yang serupa untuk menghapusnya dari papan. 
                                         Permainan ini tidak hanya mengasyikkan, tetapi juga memiliki manfaat untuk kesehatan mental Anda.
                                         Permainan ini tidak hanya menyenangkan tetapi juga dapat berkontribusi pada peningkatan kesehatan mental Anda.</p>
-                                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                                <a href="{{ route('TebakAngka') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan3" role="tabpanel"
                                                 aria-labelledby="nav-tujuan3-tab">

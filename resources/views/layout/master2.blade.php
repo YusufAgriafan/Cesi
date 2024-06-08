@@ -103,6 +103,7 @@
 
                     @auth
                         <a href="{{ route('prediksi') }}" class="nav-item nav-link @yield('nav_prediksi')">Prediksi</a>
+                        <a href="{{ route('profile.show') }}" class="nav-item nav-link @yield('nav_profil')">Profil</a>
                         <a href="{{ route('logout') }}" class="nav-item nav-link" id="logout-link">Logout</a>
                     @endauth
 
@@ -194,7 +195,7 @@
                         <form action="{{ route('subscribe')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <input class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Email" name="email" id="email" >
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
                         </form>
                         
                     </div>

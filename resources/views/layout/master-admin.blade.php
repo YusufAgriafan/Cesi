@@ -54,8 +54,8 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
-                        <span>Admin</span>
+                        <h6 class="mb-0">Admin</h6>
+                        <span>admin@gmail.com</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
@@ -63,6 +63,10 @@
                     <a href="{{ route('admin.form') }}" class="nav-item nav-link @yield('admin_form')"><i class="fa fa-keyboard me-2"></i>Forms</a>
                     <a href="{{ route('admin.table') }}" class="nav-item nav-link @yield('admin_table')"><i class="fa fa-table me-2"></i>Tables</a>
                     <a href="{{ route('admin.chart') }}" class="nav-item nav-link @yield('admin_chart')"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                    <a href="{{ route('admin.informasi.index') }}" class="nav-item nav-link @yield('admin_informasi')"><i class="fa fa-table me-2"></i>Informasi</a>
+                    <a href="{{ route('admin.kuis.index') }}" class="nav-item nav-link @yield('admin_kuis')"><i class="fa fa-table me-2"></i>Kuis</a>
+                    <a href="{{ route('admin.result') }}" class="nav-item nav-link @yield('admin_hasil')"><i class="fa fa-table me-2"></i>Hasil</a>
+                    <a href="{{ route('admin.pertanyaan.index') }}" class="nav-item nav-link @yield('admin_masukan')"><i class="fa fa-table me-2"></i>Masukan</a>
                     <a href="{{ route('logout') }}" class="nav-item nav-link" id="logout-link"><i class="fa fa-chart-bar me-2"></i>Log Out</a>
 
                     <script>

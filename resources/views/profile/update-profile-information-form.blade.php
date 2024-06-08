@@ -1,11 +1,11 @@
 <x-form-section submit="updateProfileInformation">
-    <x-slot name="title">
+    {{-- <x-slot name="title">
         {{ __('Profile Information') }}
     </x-slot>
 
     <x-slot name="description">
         {{ __('Update your account\'s profile information and email address.') }}
-    </x-slot>
+    </x-slot> --}}
 
     <x-slot name="form">
         <!-- Profile Photo -->
@@ -27,9 +27,24 @@
                 <x-label for="photo" value="{{ __('Photo') }}" />
 
                 <!-- Current Profile Photo -->
-                <div class="mt-2" x-show="! photoPreview">
-                    <img src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}" class="rounded-full h-20 w-20 object-cover">
+                <div class="mt-2 profile-container" x-show="! photoPreview">
+                    <img src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}" class="profile-photo">
                 </div>
+
+                <style>
+                    .profile-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .profile-photo {
+                        height: 200px; /* h-32 */
+                        width: 200px; /* w-32 */
+                        border-radius: 50%;
+                        object-cover: cover;
+                    }
+                    </style>
 
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview" style="display: none;">
@@ -81,6 +96,13 @@
                 @endif
             @endif
         </div>
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="phone" value="{{ __('Phone') }}" />
+            <x-input id="phone" type="text" class="mt-1 block w-full" wire:model="state.phone" required autocomplete="phone" />
+            <x-input-error for="phone" class="mt-2" />
+        </div>
+
     </x-slot>
 
     <x-slot name="actions">

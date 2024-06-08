@@ -19,11 +19,20 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         DB::table('users')->insert([
-            'name' => "Pesi Pesi",
-            'email' => 'pesi.teice@gmail.com',
-            'password' => Hash::make('teiceislam111'),
-            'usertype' => 'admin',
-            'email_verified_at' => '2024-06-02 12:17:47',
+            [
+                'name' => "Pesi Pesi",
+                'email' => 'pesi.teice@gmail.com',
+                'password' => Hash::make('teiceislam111'),
+                'usertype' => 'admin',
+                'email_verified_at' => '2024-06-02 12:17:47',
+            ],
+            [
+                'name' => "Testing",
+                'email' => 'testing@gmail.com',
+                'password' => Hash::make('testing'),
+                'usertype' => 'user',
+                'email_verified_at' => '2024-06-02 12:17:47',
+            ]
         ]);
     }
 }

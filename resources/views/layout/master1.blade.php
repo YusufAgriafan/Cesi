@@ -88,6 +88,7 @@
                     
                     @auth
                         <a href="{{ route('prediksi') }}" class="nav-item nav-link">Prediksi</a>
+                        <a href="{{ route('profile.show') }}" class="nav-item nav-link @yield('nav_profil')">Profil</a>
                         <a href="{{ route('logout') }}" class="nav-item nav-link" id="logout-link">Logout</a>
                     @endauth
 
@@ -145,7 +146,7 @@
                                         Welcome to PESI</p>
                                     <h2 class="display-1 mb-4 animated slideInDown">Atasi Depresi, Raih Kesejahteraan Mental
                                     </h2>
-                                    <a href="" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
+                                    <a href="{{ route('informasi') }}" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +162,7 @@
                                         class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">
                                         Welcome to PESI</p>
                                     <h2 class="display-1 mb-4 animated slideInDown">Kuatkan Mental, Menang Lawan Depresi</h2>
-                                    <a href="" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
+                                    <a href="{{ route('permainan') }}" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -222,7 +223,7 @@
                     <form action="{{ route('subscribe')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Email" name="email" id="email" >
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                        <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
                     </form>
                     
                 </div>

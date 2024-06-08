@@ -13,8 +13,14 @@ return new class extends Migration
     {
         Schema::create('informasis', function (Blueprint $table) {
             $table->id();
+            $table->string('judul')->unique();
+            $table->text('isi');
+            $table->string('kategori');
+            $table->text('sinopsis');
+            $table->string('img_info')->nullable();
             $table->timestamps();
         });
+        
     }
 
     /**
