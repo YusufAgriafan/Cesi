@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class InformasiController extends Controller
 {
+    public function info1()
+    {
+        return view('info.info1');
+    }
+
+    public function info2()
+    {
+        return view('info.info2');
+    }
+
+    public function info3()
+    {
+        return view('info.info3');
+    }
     public function informasi()
     {
         $informasi = Informasi::latest()->get();

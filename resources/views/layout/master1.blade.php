@@ -73,6 +73,7 @@
                             @auth
                                 <a href="{{ route('permainan') }}" class="dropdown-item">Permainan</a>
                                 <a href="{{ route('kuis') }}" class="dropdown-item">Kuis</a>
+                                <a href="/chatify" class="dropdown-item">Chat</a>
                             @endauth
                             <a href="{{ route('informasi') }}" class="dropdown-item">Informasi</a>
                             <a href="{{ route('team') }}" class="dropdown-item">Team Member</a>

@@ -64,9 +64,9 @@
                                         <div class="tab-content" id="nav-tabContent">
                                             <div class="tab-pane fade show active" id="nav-deskripsi1" role="tabpanel"
                                                 aria-labelledby="nav-deskripsi1-tab">
-                                                <p class="mb-4">Permainan Memori (Memory Game) adalah sebuah permainan yang dirancang untuk mengasah fokus dan konsentrasi pengguna dengan mencocokkan pasangan kartu yang tersembunyi. 
+                                                <p class="mb-4">Permainan Memori (Memory Game) adalah sebuah permainan yang dirancang untuk mengasah fokus dan konsentrasi pengguna dengan mencocokkan pasangan warna yang tersembunyi. 
                                         Permainan ini memiliki tujuan utama untuk penanggulangan dan pencegahan depresi, dengan memberikan aktivitas yang menyenangkan dan menenangkan yang dapat membantu mengurangi gejala depresi dan kecemasan. 
-                                        Selain itu, isi dari kartu-kartu ini akan mencakup informasi tentang gejala depresi dan cara penanggulangannya, yang bertujuan untuk meningkatkan kesadaran pengguna mengenai kesehatan mental mereka.</p>
+                                        Selain itu.</p>
                                                 <a href="{{ route('Ingat') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan1" role="tabpanel"
@@ -76,14 +76,11 @@
                                                 <p><i class="fa fa-check text-primary me-3"></i>Melatih Daya Ingat dan Konsentrasi</p>
                                             </div>
                                             <div class="tab-pane fade" id="nav-carakerja1" role="tabpanel" aria-labelledby="nav-carakerja1-tab">
-                                                <p>1.  Mulai Permainan</p>
-                                                <p class="mb-0">2. Kartu akan ditampilkan secara tertutup dalam bentuk grid</p><br>
-                                                <p>3. Setiap kartu memiliki pasangan identik yang tersembunyi di antara kartu-kartu lainnya. Isi kartu mencakup informasi tentang gejala depresi dan cara penanggulangannya.</p>
-                                                <p class="mb-0">4.  Pengguna dapat memilih dua kartu dalam setiap giliran dengan mengkliknya. Kartu yang dipilih akan terbuka dan menampilkan gambar serta informasi yang ada di baliknya.</p><br>
-                                                <p>5. Jika dua kartu yang dipilih memiliki gambar dan informasi yang sama, kartu tersebut akan tetap terbuka dan dianggap sebagai pasangan yang cocok.</p>
-                                                <p class="mb-0">6. Jika kartu yang dipilih tidak cocok, kartu tersebut akan kembali tertutup setelah beberapa detik, memungkinkan pengguna untuk mencoba lagi.</p><br>
-                                                <p>7. Jumlah giliran yang dilakukan pengguna akan dihitung dan ditampilkan di layar. Semakin sedikit giliran yang dibutuhkan untuk mencocokkan semua pasangan, semakin baik performa pengguna.</p>
-                                                <p class="mb-0">8. Permainan selesai ketika semua pasangan kartu berhasil dicocokkan.</p>
+                                                <p class="mb-4">Permainan dimulai dengan menampilkan kartu-kartu secara tertutup dalam bentuk grid. Setiap kartu 
+                                                    memiliki pasangan warna identik yang tersembunyi di antara kartu-kartu lainnya. Pengguna dapat memilih dua kartu dalam setiap giliran dengan mengkliknya, 
+                                                    dan jika dua kartu yang dipilih memiliki warna yang sama, kartu tersebut akan tetap terbuka dan dianggap 
+                                                    sebagai pasangan yang cocok. Namun, jika kartu yang dipilih tidak cocok, kartu tersebut akan kembali tertutup setelah 
+                                                    beberapa detik, memungkinkan pengguna untuk mencoba lagi. Permainan selesai ketika semua pasangan kartu berhasil dicocokkan.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -117,8 +114,8 @@
                                         <div class="tab-content" id="nav-tabContent">
                                             <div class="tab-pane fade show active" id="nav-deskripsi" role="tabpanel"
                                                 aria-labelledby="nav-deskripsi-tab">
-                                                <p class="mb-4">Teka-Teki Blok adalah permainan yang dirancang untuk melatih kemampuan berpikir strategis dan spasial Anda. Dengan antarmuka yang sederhana namun menantang, game ini mengajak Anda untuk menyusun blok-blok dengan cara yang benar agar sesuai dan mengisi ruang yang tersedia. 
-                                        Permainan ini tidak hanya menyenangkan tetapi juga dapat berkontribusi pada peningkatan kesehatan mental Anda.</p>
+                                                <p class="mb-4">Teka-Teki Blok adalah permainan yang dirancang untuk melatih kemampuan berpikir strategis dan spasial.Game ini mengajak kamu untuk menyusun blok-blok dengan cara yang benar agar sesuai dan mengisi ruang yang tersedia. 
+                                        Permainan ini tidak hanya menyenangkan tetapi juga dapat berkontribusi pada peningkatan kesehatan mentalmu.</p>
                                                 <a href="{{ route('Puzzle') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan" role="tabpanel"
@@ -128,12 +125,9 @@
                                                 <p><i class="fa fa-check text-primary me-3"></i>Mengalihkan pikiran dari stres dan kecemasan sehari-hari.</p>
                                             </div>
                                             <div class="tab-pane fade" id="nav-carakerja" role="tabpanel" aria-labelledby="nav-carakerja-tab">
-                                                <p>1.  Mulai Permainan</p>
-                                                <p class="mb-0">2. Akan diberikan sejumlah blok dengan bentuk yang berbeda</p><br>
-                                                <p>3. Seret dan letakkan blok-blok tersebut ke dalam grid permainan untuk mengisi ruang yang kosong.</p>
-                                                <p class="mb-0">4. Akan diberikan sejumlah blok dengan bentuk yang berbeda</p><br>
-                                                <p>5. Tujuannya adalah untuk mengisi seluruh grid dengan blok-blok tanpa menyisakan ruang kosong.</p>
-                                                <p class="mb-0">6. Jika berhasil menyelesaikan grid, akan diberikan poin</p>
+                                                <p class="mb-4">Permainan dimulai dengan memberikan sejumlah blok dengan bentuk yang berbeda kepada pemain. Mereka harus 
+                                                    menyelesaikan grid permainan dengan cara menarik dan meletakkan blok-blok tersebut ke dalam grid untuk mengisi ruang yang 
+                                                    kosong. Tujuan utamanya adalah menyusun blok agar sesuai dengan gambar tujuan.</p>
                                             </div>
                                         </div>
                                     </div>                                   
@@ -167,9 +161,8 @@
                                         <div class="tab-content" id="nav-tabContent">
                                             <div class="tab-pane fade show active" id="nav-deskripsi2" role="tabpanel"
                                                 aria-labelledby="nav-deskripsi2-tab">
-                                                <p class="mb-4">Harmoni adalah permainan yang terinspirasi dari Mahjong, dirancang khusus untuk mengkombinasikan dua tile yang sama. Game ini menantang dan menenangkan, mengajak Anda untuk menemukan pasangan tile yang serupa untuk menghapusnya dari papan. 
-                                        Permainan ini tidak hanya mengasyikkan, tetapi juga memiliki manfaat untuk kesehatan mental Anda.
-                                        Permainan ini tidak hanya menyenangkan tetapi juga dapat berkontribusi pada peningkatan kesehatan mental Anda.</p>
+                                                <p class="mb-4">Mahjonh dirancang khusus untuk mengkombinasikan dua tile dengan angka yang sama. Game ini menantang dan menenangkan, mengajak Anda untuk menemukan pasangan tile yang serupa untuk menghapusnya dari papan. 
+                                        Permainan ini tidak hanya mengasyikkan, tetapi juga memiliki manfaat untuk kesehatan mental Anda.</p>
                                                 <a href="{{ route('mahjong') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan2" role="tabpanel"
@@ -179,12 +172,10 @@
                                                 <p><i class="fa fa-check text-primary me-3"></i>Kepuasan Emosional</p>
                                             </div>
                                             <div class="tab-pane fade" id="nav-carakerja2" role="tabpanel" aria-labelledby="nav-carakerja2-tab">
-                                                <p>1.  Mulai Permainan</p>
-                                                <p class="mb-0">2. Cari dan klik dua tile yang sama untuk mengkombinasikannya dan menghapusnya dari papan permainan.</p><br>
-                                                <p>3. Hanya tile yang tidak terhalang oleh tile lainnya yang dapat dipilih.</p>
-                                                <p class="mb-0">4. Tujuannya adalah untuk menghapus semua tile dari papan dengan menemukan semua pasangan yang cocok.</p><br>
-                                                <p>5. Tujuannya adalah untuk mengisi seluruh grid dengan blok-blok tanpa menyisakan ruang kosong.</p>
-                                                <p class="mb-0">6. Setelah semua pasangan ditemukan dan dihapus, game selesai dengan skor yang ditampilkan</p>
+                                                <p class="mb-4">Permainan dimulai dengan mencari dan mengklik dua tile yang sama untuk mengkombinasikannya dan menghapusnya dari 
+                                                    papan permainan. Hanya tile yang tidak terhalang oleh tile lainnya yang dapat dipilih. Tujuannya adalah untuk menghapus 
+                                                    semua tile dari papan dengan menemukan semua pasangan yang cocok. Setelah semua pasangan ditemukan dan dihapus, game selesai 
+                                                    dengan skor yang ditampilkan.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -196,7 +187,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-3.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -218,24 +209,25 @@
                                         <div class="tab-content" id="nav-tabContent">
                                             <div class="tab-pane fade show active" id="nav-deskripsi3" role="tabpanel"
                                                 aria-labelledby="nav-deskripsi3-tab">
-                                                <p class="mb-4">Harmoni adalah permainan yang terinspirasi dari Mahjong, dirancang khusus untuk mengkombinasikan dua tile yang sama. Game ini menantang dan menenangkan, mengajak Anda untuk menemukan pasangan tile yang serupa untuk menghapusnya dari papan. 
-                                        Permainan ini tidak hanya mengasyikkan, tetapi juga memiliki manfaat untuk kesehatan mental Anda.
-                                        Permainan ini tidak hanya menyenangkan tetapi juga dapat berkontribusi pada peningkatan kesehatan mental Anda.</p>
+                                                <p class="mb-4">Permainan Tebak Angka 1-100 menguji kemampuan pemain dalam menebak angka dari 1 hingga 100. 
+                                                    Pemain harus memilih angka yang tepat dengan umpan balik apakah angka tersebut terlalu besar, terlalu 
+                                                    kecil, atau sudah benar. Selain menghibur, permainan ini juga dapat meningkatkan ketajaman pikiran dan fokus, 
+                                                    serta memberikan manfaat positif bagi kesehatan mental.</p>
                                                 <a href="{{ route('TebakAngka') }}" class="btn btn-primary py-3 px-5 mt-3">Main!</a>
                                             </div>
                                             <div class="tab-pane fade" id="nav-tujuan3" role="tabpanel"
                                                 aria-labelledby="nav-tujuan3-tab">
-                                                <p><i class="fa fa-check text-primary me-3"></i>Pengalihan Pikiran</p>
-                                                <p><i class="fa fa-check text-primary me-3"></i>Stimulasi Kognitif</p>
-                                                <p><i class="fa fa-check text-primary me-3"></i>Kepuasan Emosional</p>
+                                                <p><i class="fa fa-check text-primary me-3"></i>Menguji Ketepatan</p>
+                                                <p><i class="fa fa-check text-primary me-3"></i>Memperkuat Kemampuan Analitis</p>
+                                                <p><i class="fa fa-check text-primary me-3"></i>Menumbuhkan Fokus dan Konsentrasi</p>
                                             </div>
                                             <div class="tab-pane fade" id="nav-carakerja3" role="tabpanel" aria-labelledby="nav-carakerja3-tab">
-                                                <p>1.  Mulai Permainan</p>
-                                                <p class="mb-0">2. Cari dan klik dua tile yang sama untuk mengkombinasikannya dan menghapusnya dari papan permainan.</p><br>
-                                                <p>3. Hanya tile yang tidak terhalang oleh tile lainnya yang dapat dipilih.</p>
-                                                <p class="mb-0">4. Tujuannya adalah untuk menghapus semua tile dari papan dengan menemukan semua pasangan yang cocok.</p><br>
-                                                <p>5. Tujuannya adalah untuk mengisi seluruh grid dengan blok-blok tanpa menyisakan ruang kosong.</p>
-                                                <p class="mb-0">6. Setelah semua pasangan ditemukan dan dihapus, game selesai dengan skor yang ditampilkan</p>
+                                                <p class="mb-4">Permainan dimulai dengan menebak angka yang dipilih secara acak dari rentang 1 hingga 100. Pemain harus 
+                                                    memilih angka yang mereka kira benar dengan memasukkannya ke dalam kotak yang disediakan. Setiap tebakan 
+                                                    akan diberikan umpan balik apakah angka tersebut terlalu besar, terlalu kecil, atau sudah tepat. Tujuannya 
+                                                    adalah untuk menebak angka yang benar dengan seakurat mungkin. Setelah berhasil menebak angka yang tepat, 
+                                                    permainan selesai, dan skor akan ditampilkan.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>

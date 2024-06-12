@@ -24,6 +24,14 @@ Route::get('/auth/redirect', [SocialiteController::class, 'redirect']);
 Route::get('/auth/google/callback', [SocialiteController::class, 'callback']);
 
 Route::middleware('auth')->group(function () {
+    // Route::get('/chat', [MainController::class, 'chat'])->name('chat');
+    // Route::post('/chat', 'App\Http\Controllers\ChatController');
+
+    // Route::get('/lagu', [MainController::class, 'lagu'])->name('lagu');
+
+    Route::get('/bot', [MainController::class, 'bot'])->name('bot');
+    Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');
+
     Route::get('/game', [MainController::class, 'permainan'])->name('permainan');
     Route::get('/prediksi', [MainController::class, 'prediksi'])->name('prediksi');
 
@@ -42,11 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/game/MemoryGame', [GameController::class, 'Ingat'])->name('Ingat');
     Route::get('/game/TekaTekiBlok', [GameController::class, 'Puzzle'])->name('Puzzle');
 
-    Route::get('/cek-depresi', [PrediksiController::class, 'index']);
-    Route::post('/cek-depresi', [PrediksiController::class, 'cekDepresi']);
-
-    Route::get('/diskusi', [DiskusiController::class, 'diskusi'])->name('diskusi');
-    Route::post('/diskusi', [DiskusiController::class, 'kirimPesan'])->name('diskusi.pesan');
+    Route::post('/cek-depresi', [PrediksiController::class, 'cekDepresi'])->name('cekDepresi');
    
 });
 
@@ -97,7 +101,10 @@ Route::prefix('dashboard')->name('admin.')->middleware('auth')->group(function (
 
 Route::get('/informasi', [InformasiController::class, 'informasi'])->name('informasi');
 Route::get('/informasi/{judul}', [InformasiController::class, 'baca'])->name('baca');
-// Route::get('/informasi/baca', [InformasiController::class, 'baca'])->name('baca');
+Route::get('/info1', [InformasiController::class, 'info1'])->name('info1');
+Route::get('/info2', [InformasiController::class, 'info2'])->name('info2');
+Route::get('/info3', [InformasiController::class, 'info3'])->name('info3');
+
 Route::get('/team', [MainController::class, 'team'])->name('team');
 Route::get('/detail', [MainController::class, 'detail'])->name('detail');
 Route::get('/masukan', [PertanyaanController::class, 'masukan'])->name('masukan');

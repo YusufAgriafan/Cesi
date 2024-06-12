@@ -16,6 +16,16 @@ class MainController extends Controller
         return view('index');
     }
 
+    public function bot()
+    {
+        return view('user.botman');
+    }
+
+    public function lagu()
+    {
+        return view('user.music');
+    }
+
     public function permainan()
     {
         return view('permainan');
@@ -26,9 +36,9 @@ class MainController extends Controller
         return view('masukan');
     }
 
-    public function detail()
+    public function chat()
     {
-        return view('detail');
+        return view('user.chat');
     }
 
     public function project()
@@ -43,7 +53,7 @@ class MainController extends Controller
 
     public function prediksi()
     {
-        return view('user.pred.prediksi');
+        return view('user.pred.index');
     }
 
     public function kuis()

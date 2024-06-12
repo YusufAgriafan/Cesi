@@ -31,6 +31,8 @@
 
     <!-- Template Stylesheet -->
     <link href=" {{ asset('/css/style.css ') }}" rel="stylesheet">
+    <link rel="stylesheet" href=" {{ asset('/music/style.css ') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     @yield('css')
 
@@ -42,7 +44,7 @@
         .page-header {
             padding-top: 12rem;
             padding-bottom: 6rem;
-            background: url(../img/@yield('header').jpg) top left no-repeat;
+            background: url("{{ asset('img/' . trim($__env->yieldContent('header')) . '.jpg') }}") top left no-repeat;
             background-size: cover;
         }
     </style>
@@ -87,6 +89,7 @@
                             @auth
                                 <a href="{{ route('permainan') }}" class="dropdown-item">Permainan</a>
                                 <a href="{{ route('kuis') }}" class="dropdown-item">Kuis</a>
+                                <a href="/chatify" class="dropdown-item">Chat</a>
                             @endauth
 
                             <a href="{{ route('informasi') }}" class="dropdown-item">Informasi</a>
@@ -139,7 +142,11 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
-            <h1 class="display-3 mb-4 animated slideInDown">@yield('page')</h1>
+            <h1 class="display-3 mb-4 animated slideInDown">@yield('page') <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </button>
+              
+            </h1> 
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="{{ route('index') }}">Home</a></li>
@@ -153,6 +160,64 @@
         </div>
     </div>
     <!-- Page Header End -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Musik</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="main">
+              <div class="wrapper">
+                  <div class="top-bar">
+                    <i class="material-icons">expand_more</i>
+                    <span>Now Playing</span>
+                    <i class="material-icons">more_horiz</i>
+                  </div>
+                  <div class="img-area">
+                    <img src="" alt="">
+                  </div>
+                  <div class="song-details">
+                    <p class="name"></p>
+                    <p class="artist"></p>
+                  </div>
+                  <div class="progress-area">
+                    <div class="progress-bar">
+                      <audio id="main-audio" src=""></audio>
+                    </div>
+                    <div class="song-timer">
+                      <span class="current-time">0:00</span>
+                      <span class="max-duration">0:00</span>
+                    </div>
+                  </div>
+                  <div class="controls">
+                    <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                    <i id="prev" class="material-icons">skip_previous</i>
+                    <div class="play-pause">
+                      <i class="material-icons play">play_arrow</i>
+                    </div>
+                    <i id="next" class="material-icons">skip_next</i>
+                    <i id="more-music" class="material-icons">queue_music</i>
+                  </div>
+                  <div class="music-list">
+                    <div class="header">
+                      <div class="row">
+                        <i class= "list material-icons">queue_music</i>
+                        <span>Music list</span>
+                      </div>
+                      <i id="close" class="material-icons">close</i>
+                    </div>
+                    <ul>
+                      <!-- here li list are coming from js -->
+                    </ul>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <script src=" {{ asset('/music/js/music-list.js ') }}"></script>
+      <script src="{{ asset('/music/js/script.js ') }}"></script>
+      
 
     @yield('content')
 
