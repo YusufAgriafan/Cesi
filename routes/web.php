@@ -29,6 +29,10 @@ Route::middleware('auth')->group(function () {
 
     // Route::get('/lagu', [MainController::class, 'lagu'])->name('lagu');
 
+    Route::get('/halo', function () {
+        return view('user.testing');
+    });
+
     Route::get('/bot', [MainController::class, 'bot'])->name('bot');
     Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');
 

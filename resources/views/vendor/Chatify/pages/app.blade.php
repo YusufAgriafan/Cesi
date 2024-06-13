@@ -106,6 +106,14 @@
         </nav>
         {!! view('Chatify::layouts.info')->render() !!}
     </div>
+
+    <script>
+        var botmanWidget = {
+            aboutText: 'Mulailah percakapan dengan hai',
+            introMessage: "Selamat datang di Pesibot"
+        };
+    </script>
+    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 </div>
 
 @include('Chatify::layouts.modals')

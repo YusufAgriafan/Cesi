@@ -21,17 +21,15 @@
                     {{-- <p>Probabilitas Kelas 0 (Tidak Depresi): {{ $predicted_proba['predicted_proba_class_0'] }}</p>
                     <p>Probabilitas Kelas 1 (Depresi): {{ $predicted_proba['predicted_proba_class_1'] }}</p> --}}
 
-                    @if($teks)
-                        <h1 class="display-5 mb-4">Hasil</h1>
-                        <p>{{ $teks->teks1 }}</p>
+                    <h1 class="display-5 mb-4">Hasil</h1>
+                    <p>Wah, kamu luar biasa! Nampaknya suasana hatimu benar-benar cerah. Terus jaga pola hidup sehatmu, 
+                    dan luangkan waktu untuk menikmati setiap momen kebahagiaan. Ingatlah bahwa merayakan keberhasilan 
+                    kecilmu bisa menjadi bahan bakar yang luar biasa untuk semangat hidupmu.</p>
 
-                        <h1 class="display-5 mb-4">Saran</h1>
-                        <p>{{ $teks->teks2 }}</p>
-                    @else
-                        <div class="alert alert-warning display-5 mb-4">
-                            Tidak ada data teks yang ditemukan untuk hasil prediksi ini.
-                        </div>
-                    @endif
+                    <h1 class="display-5 mb-4">Saran</h1>
+                    <p>Wah, kamu luar biasa! Nampaknya suasana hatimu benar-benar cerah. Terus jaga pola hidup sehatmu, 
+                    dan luangkan waktu untuk menikmati setiap momen kebahagiaan. Ingatlah bahwa merayakan keberhasilan 
+                    kecilmu bisa menjadi bahan bakar yang luar biasa untuk semangat hidupmu.</p>
 
                 </div>
                 

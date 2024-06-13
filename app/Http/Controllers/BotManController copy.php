@@ -46,7 +46,7 @@ class BotManController extends Controller
 
     public function startDepressionConversation($botman)
     {
-        $botman->startConversation(new MoodConversation);
+        $botman->startConversation(new DepressionConversation);
     }
 
     public function provideHelpResources($botman)

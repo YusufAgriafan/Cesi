@@ -2,55 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class DatabaseSeeder extends Seeder
+class TeksSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        DB::table('users')->insert([
-            [
-                'name' => "Pesi Pesi",
-                'email' => 'pesi.teice@gmail.com',
-                'password' => Hash::make('teiceislam111'),
-                'usertype' => 'admin',
-                'email_verified_at' => '2024-06-02 12:17:47',
-            ],
-            [
-                'name' => "Testing",
-                'email' => 'testing@gmail.com',
-                'password' => Hash::make('testing'),
-                'usertype' => 'user',
-                'email_verified_at' => '2024-06-02 12:17:47',
-            ]
-        ]);
-
-        DB::table('quizzes')->insert([
-            [
-                'quiz_name' => "test",
-                'user_id' => '1',
-            ]
-        ]);
-
-        DB::table('questions')->insert([
-            [
-                'question' => "test",
-                'options' => '{"a":"1","b":"2","c":"3","d":"4"}',
-                'answer' => 'c',
-                'quiz_id' => '1',
-            ]
-        ]);
-
         DB::table('teks')->insert([
             [
                 'no_teks' => 1,

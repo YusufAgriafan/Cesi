@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GALWEBI - Kuis</title>
+@extends('layout.master2')
+@section('tittle', 'Pesi - Kuis')
+@section('header', 'header1')
+@section('page', 'Kuis')
+@section('nav_fitur', 'active')
+
+@section('css')
     <link rel="stylesheet" href="{{ asset('quiz/quiz3.css') }}">
-    <!-- FontAweome CDN Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
+@endsection
+
+@section('content')
+
     <!-- start Quiz button -->
     <div class="start_btn"><button>Mulai Kuis</button></div>
     <!-- Info Box -->
@@ -78,6 +77,5 @@
     </script>
     <script src="{{ asset('quiz/script.js') }}"></script>
 
-</body>
-</html>
-</html>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+@endsection

@@ -40,7 +40,7 @@ restart_quiz.onclick = () => {
     if (quizBy == "admin") {
         location.reload();
     } else {
-        alert("Quiz Dari Guru hanya bisa dikerjakan sekali!");
+        location.reload();
     }
     // quiz_box.classList.add("activeQuiz"); //show quiz box
     // result_box.classList.remove("activeResult"); //hide result box

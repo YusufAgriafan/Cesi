@@ -96,33 +96,49 @@ class MainController extends Controller
         ]);
     }
 
+    // public function api(Request $request, Quiz $quiz)
+    // {
+    //     $cek = QuizResult::where('quiz_id', $quiz->id)->where('user_id', Auth::id())->get();
+    //     $questions  = Question::where('quiz_id', $quiz->id)->get();
+
+    //     if (!count($cek)) {
+    //         $quiz_result = new QuizResult;
+    //         $quiz_result->quiz_id = $quiz->id;
+    //         $quiz_result->user_id = Auth::id();
+    //         $quiz_result->true = $request->true;
+    //         $quiz_result->false = (count($questions) - $request->true);
+    //         $quiz_result->score = round($request->true * (100 / count($questions)), 2);
+    //         $quiz_result->by = $quiz->user_id;
+    //         $quiz_result->save();
+    //     } else {
+    //         if ($quiz->by == "admin") {
+    //             $quiz_result = QuizResult::where('quiz_id', $quiz->id)->where('user_id', Auth::id());
+    //             $quiz_result->update([
+    //                 'quiz_id' => $quiz->id,
+    //                 'user_id' => Auth::id(),
+    //                 'true' => $request->true,
+    //                 'false' => (count($questions) - $request->true),
+    //                 'score' => round($request->true * (100 / count($questions)), 2),
+    //             ]);
+    //         }
+    //     }
+    // }
+
     public function api(Request $request, Quiz $quiz)
     {
-        $cek = QuizResult::where('quiz_id', $quiz->id)->where('user_id', Auth::id())->get();
         $questions  = Question::where('quiz_id', $quiz->id)->get();
 
-        if (!count($cek)) {
-            $quiz_result = new QuizResult;
-            $quiz_result->quiz_id = $quiz->id;
-            $quiz_result->user_id = Auth::id();
-            $quiz_result->true = $request->true;
-            $quiz_result->false = (count($questions) - $request->true);
-            $quiz_result->score = round($request->true * (100 / count($questions)), 2);
-            $quiz_result->by = $quiz->user_id;
-            $quiz_result->save();
-        } else {
-            if ($quiz->by == "admin") {
-                $quiz_result = QuizResult::where('quiz_id', $quiz->id)->where('user_id', Auth::id());
-                $quiz_result->update([
-                    'quiz_id' => $quiz->id,
-                    'user_id' => Auth::id(),
-                    'true' => $request->true,
-                    'false' => (count($questions) - $request->true),
-                    'score' => round($request->true * (100 / count($questions)), 2),
-                ]);
-            }
-        }
+        // Buat entri baru untuk setiap hasil kuis
+        $quiz_result = new QuizResult;
+        $quiz_result->quiz_id = $quiz->id;
+        $quiz_result->user_id = Auth::id();
+        $quiz_result->true = $request->true;
+        $quiz_result->false = (count($questions) - $request->true);
+        $quiz_result->score = round($request->true * (100 / count($questions)), 2);
+        $quiz_result->by = $quiz->user_id;
+        $quiz_result->save();
     }
+
 
     public function rec()
     {
