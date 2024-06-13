@@ -23,15 +23,17 @@ Route::post('/home', [PertanyaanController::class, 'subscribe'])->name('subscrib
 Route::get('/auth/redirect', [SocialiteController::class, 'redirect']);
 Route::get('/auth/google/callback', [SocialiteController::class, 'callback']);
 
+Route::get('/tes', [MainController::class, 'tes'])->name('tes');
+
 Route::middleware('auth')->group(function () {
     // Route::get('/chat', [MainController::class, 'chat'])->name('chat');
     // Route::post('/chat', 'App\Http\Controllers\ChatController');
 
     // Route::get('/lagu', [MainController::class, 'lagu'])->name('lagu');
 
-    Route::get('/halo', function () {
-        return view('user.testing');
-    });
+    // Route::get('/tes', function () {
+    //     return view('user.kuis');
+    // });
 
     Route::get('/bot', [MainController::class, 'bot'])->name('bot');
     Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');

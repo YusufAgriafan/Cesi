@@ -39,7 +39,6 @@
                                         <i class="fa fa-check fa-3x text-primary mb-3"></i>
                                         <h4 class="mb-3">Gejala Depresi</h4>
                                         <p class="mb-3">
-                                            ChatGPT
                                             Depresi adalah gangguan mental yang memengaruhi aspek emosional, motivasi, fungsi motorik, dan kognitif, 
                                             dengan gejala seperti perubahan mood drastis, kurang motivasi, gangguan tidur, perubahan nafsu makan, dan 
                                             pemikiran negatif.</p>

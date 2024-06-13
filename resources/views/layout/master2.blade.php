@@ -103,7 +103,7 @@
                     <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
                     <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
                     @endguest
-
+                    <a href="{{ route('tes') }}" class="nav-item nav-link @yield('nav_tes')">Tes</a>
                     @auth
                         <a href="{{ route('prediksi') }}" class="nav-item nav-link @yield('nav_prediksi')">Prediksi</a>
                         <a href="{{ route('profile.show') }}" class="nav-item nav-link @yield('nav_profil')">Profil</a>

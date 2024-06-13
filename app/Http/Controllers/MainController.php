@@ -16,6 +16,11 @@ class MainController extends Controller
         return view('index');
     }
 
+    public function tes()
+    {
+        return view('user.kuis');
+    }
+
     public function bot()
     {
         return view('user.botman');
