@@ -39,7 +39,7 @@
                             </div>
                           </div>
   
-                          <div class="input-list mb-3 d-flex" style="align-items: center">
+                          {{-- <div class="input-list mb-3 d-flex" style="align-items: center">
                             <label for="" class="col-1">C</label>
                             <div class="col-10" value="{{ old('c') }}">
                               <input type="text" style="width: 100%" class="mb-0" name="c" value="{{ old('c') }}" class="form-control">
@@ -57,7 +57,7 @@
                                 <small class="text-danger">{{ $message }}</small>    
                               @enderror
                             </div>
-                          </div>
+                          </div> --}}
   
                           <div class="input-list mb-3 d-flex" style="align-items: center">
                             <label for="" class="col-1">Answer</label>

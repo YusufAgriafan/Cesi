@@ -35,16 +35,16 @@ class QuestionController extends Controller
             'question' => "required",
             'a' => "required",
             'b' => "required",
-            'c' => "required",
-            'd' => "required",
+            // 'c' => "required",
+            // 'd' => "required",
             'answer' => "required",
         ]);
 
         $options = json_encode([
             "a" => $request->a,
             "b" => $request->b,
-            "c" => $request->c,
-            "d" => $request->d,
+            // "c" => $request->c,
+            // "d" => $request->d,
         ]);
 
         $question = new Question;
@@ -88,16 +88,16 @@ class QuestionController extends Controller
             'question' => "required",
             'a' => "required",
             'b' => "required",
-            'c' => "required",
-            'd' => "required",
+            // 'c' => "required",
+            // 'd' => "required",
             'answer' => "required",
         ]);
 
         $options = json_encode([
             "a" => $request->a,
             "b" => $request->b,
-            "c" => $request->c,
-            "d" => $request->d,
+            // "c" => $request->c,
+            // "d" => $request->d,
         ]);
 
         $question->question = $request->question;

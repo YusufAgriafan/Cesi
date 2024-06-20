@@ -60,11 +60,13 @@ Route::middleware('auth')->group(function () {
    
 });
 
-Route::prefix('dashboard')->name('admin.')->middleware('auth')->group(function () {
+Route::prefix('dashboard')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/form', [DashboardController::class, 'form'])->name('form');
     Route::get('/chart', [DashboardController::class, 'chart'])->name('chart');
     Route::get('/table', [DashboardController::class, 'table'])->name('table');
+
+    Route::resource('/users', UserController::class);
 
     Route::name('informasi.')->group(function () {
         Route::get('/informasi', [InformasiController::class, 'index'])->name('index');

@@ -40,20 +40,20 @@ class InformasiController extends Controller
         return view('info.baca', compact('informasi'));
     }
 
-    public function baca2(Request $request)
-    {
-        $search = $request->input('search');
+    // public function baca2(Request $request)
+    // {
+    //     $search = $request->input('search');
 
-        $informasi = Informasi::where('judul', 'like', "%$search%")
-                        ->orWhere('tag', 'like', "%$search%")
-                        ->paginate(10);
+    //     $informasi = Informasi::where('judul', 'like', "%$search%")
+    //                     ->orWhere('tag', 'like', "%$search%")
+    //                     ->paginate(10);
 
-        return view('admin.info.index', compact('informasi'));
-    }
+    //     return view('admin.info.index', compact('informasi'));
+    // }
 
     public function index()
     {
-        $informasi = Informasi::latest()->paginate(5);
+        $informasi = Informasi::latest()->paginate(6);
 
         return view('admin.info.index', compact('informasi'));
     }

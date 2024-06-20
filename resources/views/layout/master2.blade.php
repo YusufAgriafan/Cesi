@@ -150,9 +150,9 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="{{ route('index') }}">Home</a></li>
-                    @if (Route::currentRouteName() !== 'prediksi')
-                        <li class="breadcrumb-item">Fitur</li>
-                    @endif
+                        @if (Route::currentRouteName() !== 'prediksi' && Route::currentRouteName() !== 'tes')
+                            <li class="breadcrumb-item">Fitur</li>
+                        @endif
                     <li class="breadcrumb-item active" aria-current="page">@yield('page')</li>
                 </ol>
                 

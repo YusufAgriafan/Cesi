@@ -18,7 +18,7 @@ class MainController extends Controller
 
     public function tes()
     {
-        return view('user.kuis');
+        return view('user.tes');
     }
 
     public function bot()
@@ -89,7 +89,7 @@ class MainController extends Controller
                 "numb" => $no,
                 "answer" => $options[$value->answer],
                 "question" => filter_var($value->question, FILTER_SANITIZE_STRING),
-                "options" => [$options['a'], $options['b'], $options['c'], $options['d']]
+                "options" => [$options['a'], $options['b']]
             ];
 
             $no++;

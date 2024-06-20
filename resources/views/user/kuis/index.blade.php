@@ -26,14 +26,16 @@
                         document.querySelector('.alert').remove();
                     }, 7000);
                 </script>
+
+                @endif
             </div>
             <div class="row g-4">
-                @endif
+                
 
                   @if ($kuis)
                     @foreach ($kuis as $item)
 
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 30px;">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 60px;">
                             <div class="team-item">
                                 <div class="team-text">
                                     <h4 class="mb-0">{{ $item->quiz_name }}</h4>

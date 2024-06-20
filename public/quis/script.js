@@ -129,26 +129,6 @@ function optionSelected(answer) {
     userScore += scoreToAdd;
     answer.classList.add("correct");
 
-    // Tampilkan efek visual berdasarkan jawaban yang benar atau salah
-    // if (userAns == questions[que_count].answer) {
-    //     answer.classList.add("correct");
-    //     answer.insertAdjacentHTML("beforeend", tickIconTag); // Tambahkan ikon centang pada opsi yang benar
-    //     console.log("Jawaban Benar");
-    //     console.log("Skor Anda = " + userScore);
-    // } else {
-    //     answer.classList.add("incorrect");
-    //     answer.insertAdjacentHTML("beforeend", crossIconTag); // Tambahkan ikon silang pada opsi yang salah
-    //     console.log("Jawaban Salah");
-    //     // Jika salah, tunjukkan jawaban yang benar dengan warna hijau
-    //     for (let i = 0; i < allOptions; i++) {
-    //         if (option_list.children[i].textContent == questions[que_count].answer) {
-    //             option_list.children[i].setAttribute("class", "option correct");
-    //             option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); // Tambahkan ikon centang pada opsi yang benar
-    //             console.log("Jawaban Benar Otomatis Terpilih.");
-    //         }
-    //     }
-    // }
-
     // Matikan opsi setelah dipilih
     for (let i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled");
@@ -165,66 +145,28 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     document.getElementById('resultContainer').style.display = 'block';  
     if (userScore >= 20) { // if user scored 20 or more
-        let scoreTag = '<span>Anda mungkin mengalami depresi berat, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
+        let scoreTag = '<span>Kamu mungkin mengalami depresi berat, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
         scoreText.innerHTML = scoreTag;
         document.getElementById('skor5').style.display = 'block';  
     } else if (userScore >= 15) { // if user scored 15-19
-        let scoreTag = '<span>Anda mungkin mengalami depresi sedang, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
+        let scoreTag = '<span>Kamu mungkin mengalami depresi sedang, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
         scoreText.innerHTML = scoreTag;
         document.getElementById('skor4').style.display = 'block';  
     } else if (userScore >= 10) { // if user scored 10-14
-        let scoreTag = '<span>Anda mungkin mengalami depresi ringan, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
+        let scoreTag = '<span>Kamu mungkin mengalami depresi ringan, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
         scoreText.innerHTML = scoreTag;
         document.getElementById('skor3').style.display = 'block';  
     } else if (userScore >= 5) { // if user scored 5-9
-        let scoreTag = '<span>Anda mungkin mengalami gejala depresi minimal, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
+        let scoreTag = '<span>Kamu mungkin mengalami sedikit gejala depresi, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
         scoreText.innerHTML = scoreTag;
         document.getElementById('skor2').style.display = 'block';  
     } else { // if user scored 0-4
-        let scoreTag = '<span>Kemungkinan depresi rendah, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
+        let scoreTag = '<span>Kemungkinan kamu tidak depresi, Skormu </span><h2 style="text-align: center;">' + userScore + '</h2>';
         scoreText.innerHTML = scoreTag;
         document.getElementById('skor1').style.display = 'block';  
     }  
     
-}
-// function startTimer(time){
-//     counter = setInterval(timer, 1000);
-//     function timer(){
-//         timeCount.textContent = time; //changing the value of timeCount with time value
-//         time--; //decrement the time value
-//         if(time < 9){ //if timer is less than 9
-//             let addZero = timeCount.textContent;
-//             timeCount.textContent = "0" + addZero; //add a 0 before time value
-//         }
-//         if(time < 0){ //if timer is less than 0
-//             clearInterval(counter); //clear counter
-//             timeText.textContent = "Time Off"; //change the time text to time off
-//             const allOptions = option_list.children.length; //getting all option items
-//             let correcAns = questions[que_count].answer; //getting correct answer from array
-//             for(i=0; i < allOptions; i++){
-//                 if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
-//                     option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
-//                     option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
-//                     console.log("Time Off: Auto selected correct answer.");
-//                 }
-//             }
-//             for(i=0; i < allOptions; i++){
-//                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
-//             }
-//             next_btn.classList.add("show"); //show the next button if user selected any option
-//         }
-//     }
-// }
-// function startTimerLine(time){
-//     counterLine = setInterval(timer, 29);
-//     function timer(){
-//         time += 1; //upgrading time value with 1
-//         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
-//         if(time > 549){ //if time value is greater than 549
-//             clearInterval(counterLine); //clear counterLine
-//         }
-//     }
-// }
+} 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';

@@ -60,12 +60,13 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="{{ route('admin.dashboard') }}" class="nav-item nav-link @yield('admin_dashboard')"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="{{ route('admin.form') }}" class="nav-item nav-link @yield('admin_form')"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    {{-- <a href="{{ route('admin.form') }}" class="nav-item nav-link @yield('admin_form')"><i class="fa fa-keyboard me-2"></i>Forms</a>
                     <a href="{{ route('admin.table') }}" class="nav-item nav-link @yield('admin_table')"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="{{ route('admin.chart') }}" class="nav-item nav-link @yield('admin_chart')"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <a href="{{ route('admin.informasi.index') }}" class="nav-item nav-link @yield('admin_informasi')"><i class="fa fa-table me-2"></i>Informasi</a>
-                    <a href="{{ route('admin.kuis.index') }}" class="nav-item nav-link @yield('admin_kuis')"><i class="fa fa-table me-2"></i>Kuis</a>
+                    <a href="{{ route('admin.chart') }}" class="nav-item nav-link @yield('admin_chart')"><i class="fa fa-chart-bar me-2"></i>Charts</a> --}}
+                    <a href="{{ route('admin.informasi.index') }}" class="nav-item nav-link @yield('admin_informasi')"><i class="fa fa-keyboard me-2"></i>Informasi</a>
+                    <a href="{{ route('admin.kuis.index') }}" class="nav-item nav-link @yield('admin_kuis')"><i class="fa fa-keyboard me-2"></i>Kuis</a>
                     <a href="{{ route('admin.result') }}" class="nav-item nav-link @yield('admin_hasil')"><i class="fa fa-table me-2"></i>Hasil</a>
+                    <a href="/chatify" class="nav-item nav-link @yield('admin_hasil')"><i class="fa fa-envelope me-2"></i>Chat</a>
                     <a href="{{ route('admin.pertanyaan.index') }}" class="nav-item nav-link @yield('admin_masukan')"><i class="fa fa-table me-2"></i>Masukan</a>
                     <a href="{{ route('logout') }}" class="nav-item nav-link" id="logout-link"><i class="fa fa-chart-bar me-2"></i>Log Out</a>
 
@@ -110,8 +111,8 @@
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item ">
                         <a href="#" class="nav-link " data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
+                            {{-- <i class="fa fa-envelope me-lg-2"></i> --}}
+                            <span class="d-none d-lg-inline-flex"></span>
                         </a>
                     </div>
                     
