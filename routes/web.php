@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Depresi;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\MainController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\QuizController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResultController;
+use App\Http\Controllers\DepresiController;
 use App\Http\Controllers\DiskusiController;
 use App\Http\Controllers\PrediksiController;
 use App\Http\Controllers\QuestionController;
@@ -34,6 +36,11 @@ Route::middleware('auth')->group(function () {
     // Route::get('/tes', function () {
     //     return view('user.kuis');
     // });
+
+    Route::get('/tesDepresi', [DepresiController::class, 'tesDepresi'])->name('tesDepresi');
+    Route::get('/tes/rec', [DepresiController::class, 'rec'])->name('tes.rec');    // Route::post('/tes/api', [DepresiController::class, 'api'])->name('tes.api');
+    Route::get('/tes/api', [DepresiController::class, 'api'])->name('tes.api');
+    Route::get('/hasilTes', [DepresiController::class, 'index'])->name('tes.result');
 
     Route::get('/bot', [MainController::class, 'bot'])->name('bot');
     Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');

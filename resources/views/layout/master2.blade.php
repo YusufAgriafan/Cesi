@@ -81,6 +81,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="{{ route('index') }}" class="nav-item nav-link">Home</a>
+                    @guest
+                        <a href="{{ route('tes') }}" class="nav-item nav-link @yield('nav_tes')">Tes</a>
+                    @endguest
+
+                    @auth
+                        <a href="{{ route('tesDepresi') }}" class="nav-item nav-link @yield('nav_tes')">Tes</a>
+                    @endauth
 
                     <div class="nav-item dropdown ">
                         <a href="#" class="nav-link dropdown-toggle @yield('nav_fitur')" data-bs-toggle="dropdown ">Fitur</a>
@@ -88,11 +95,14 @@
 
                             @auth
                                 <a href="{{ route('permainan') }}" class="dropdown-item">Permainan</a>
+                                @if(!$lastDepression)
                                 <a href="{{ route('kuis') }}" class="dropdown-item">Kuis</a>
+                                @endif
                                 <a href="/chatify" class="dropdown-item">Chat</a>
                             @endauth
-
+                            @if(!$lastDepression)
                             <a href="{{ route('informasi') }}" class="dropdown-item">Informasi</a>
+                            @endif
                             <a href="{{ route('team') }}" class="dropdown-item">Team Member</a>
                             <a href="{{ route('masukan') }}" class="dropdown-item">Masukan</a>
                             {{-- <a href="404.html" class="dropdown-item">404 Page</a> --}}
@@ -103,7 +113,6 @@
                     <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
                     <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
                     @endguest
-                    <a href="{{ route('tes') }}" class="nav-item nav-link @yield('nav_tes')">Tes</a>
                     @auth
                         <a href="{{ route('prediksi') }}" class="nav-item nav-link @yield('nav_prediksi')">Prediksi</a>
                         <a href="{{ route('profile.show') }}" class="nav-item nav-link @yield('nav_profil')">Profil</a>

@@ -66,6 +66,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
+                    @guest
+                        <a href="{{ route('tes') }}" class="nav-item nav-link @yield('nav_tes')">Tes</a>
+                    @endguest
+
+                    @auth
+                        <a href="{{ route('tesDepresi') }}" class="nav-item nav-link @yield('nav_tes')">Tes</a>
+                    @endauth
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Fitur</a>
@@ -86,7 +93,6 @@
                         <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
                         <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
                     @endguest
-                    <a href="{{ route('tes') }}" class="nav-item nav-link @yield('nav_tes')">Tes</a>
                     @auth
                         <a href="{{ route('prediksi') }}" class="nav-item nav-link">Prediksi</a>
                         <a href="{{ route('profile.show') }}" class="nav-item nav-link @yield('nav_profil')">Profil</a>

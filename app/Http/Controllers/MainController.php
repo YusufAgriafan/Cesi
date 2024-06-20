@@ -149,5 +149,10 @@ class MainController extends Controller
     {
         return redirect()->route('kuis')->with('success', 'Kuis Berhasil Dikerjakan');
     }
+
+    public function tesDepresi()
+    {
+        return view('user.tesDepresi');
+    }
 }
 
